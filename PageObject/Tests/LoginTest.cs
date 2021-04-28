@@ -15,7 +15,20 @@ namespace PageObject
     {
         [Test]
         [SmokeTest]
-        public void Test2()
+        [Description("Проверить корректный логин")]
+        public void SuccessLoginTest()
+        {
+            var loginSteps = new LoginSteps(Driver);
+            loginSteps.LogIn();
+            
+            Assert.IsTrue(new DashboardPage(Driver).IsPageOpened());
+            Assert.AreEqual(Driver.Title, "All Projects - TestRail");
+        }
+
+        [Test]
+        [SmokeTest]
+        [Description("Проверить некорректный логин")]
+        public void IncorrectLoginTest()
         {
             var loginSteps = new LoginSteps(Driver);
             loginSteps.LogIn();
