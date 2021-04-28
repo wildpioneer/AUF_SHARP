@@ -15,7 +15,8 @@
         <PackageReference Include="NLog.Config" Version="4.7.9" />
         <PackageReference Include="NLog.Extensions.Logging" Version="1.7.2" />
         <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.5.1" />
-        <PackageReference Include="NUnit" Version="3.12.0" />
+        <PackageReference Include="NUnit" Version="3.13.2" />
+        <PackageReference Include="NUnit.Allure" Version="1.0.13" />
         <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
         <PackageReference Include="Selenium.Support" Version="3.141.0" />
@@ -36,6 +37,10 @@
       </Content>
       <None Remove="TestData\SQL\users.sql" />
       <Content Include="TestData\SQL\users.sql">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="allureConfig.json" />
+      <Content Include="allureConfig.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
     </ItemGroup>

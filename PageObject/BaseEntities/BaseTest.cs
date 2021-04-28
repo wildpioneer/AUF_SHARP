@@ -3,6 +3,7 @@ using System.IO;
 using System.Reflection;
 using System.Text.Json;
 using Newtonsoft.Json;
+using NUnit.Allure.Core;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -13,6 +14,7 @@ using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace PageObject.BaseEntities
 {
+    [AllureNUnit]
     public class BaseTest
     {
         public static string BaseURL = Configurator.BaseUrl;
